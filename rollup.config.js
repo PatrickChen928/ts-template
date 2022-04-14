@@ -1,16 +1,21 @@
-import clear from 'rollup-plugin-clear';
-import esbuild from 'rollup-plugin-esbuild';
-import { getBabelOutputPlugin } from '@rollup/plugin-babel';
-import dts from 'rollup-plugin-dts';
+import { getBabelOutputPlugin } from '@rollup/plugin-babel'
+import clear from 'rollup-plugin-clear'
+import dts from 'rollup-plugin-dts'
+import esbuild from 'rollup-plugin-esbuild'
 
+// TODO: change [filename] to your app name
 const useBabelPlugin = function(options = {}, minified) {
-  return getBabelOutputPlugin({ presets: [['@babel/preset-env', options]], filename: 'temp', minified });
-} 
+  return getBabelOutputPlugin({
+    presets: [['@babel/preset-env', options]],
+    filename: 'temp',
+    minified
+  })
+}
 
 const esbuildPlugin = esbuild({
   sourceMap: true,
   target: 'es2015'
-});
+})
 
 module.exports = [
   {
@@ -19,23 +24,21 @@ module.exports = [
       {
         file: 'dist/index.mjs',
         format: 'es',
-        plugins: [ useBabelPlugin() ]
+        plugins: [useBabelPlugin()]
       },
       {
         file: 'dist/index.cjs',
         format: 'cjs',
-        plugins: [ useBabelPlugin() ]
+        plugins: [useBabelPlugin()]
       },
       {
-        file: `dist/index.umd.js`,
-        plugins: [ useBabelPlugin({ modules: 'umd' }), ]
+        file: 'dist/index.umd.js',
+        plugins: [useBabelPlugin({ modules: 'umd' })]
       },
       {
-        file: `dist/index.umd.min.js`,
-        plugins: [
-          useBabelPlugin({ modules: 'umd' }, true),
-        ],
-      },
+        file: 'dist/index.umd.min.js',
+        plugins: [useBabelPlugin({ modules: 'umd' }, true)]
+      }
     ],
     plugins: [
       clear({
@@ -45,8 +48,8 @@ module.exports = [
     ]
   },
   {
-    input: "./src/index.ts",
-    output: [{ file: "types/index.d.ts", format: "es" }],
-    plugins: [dts()],
+    input: './src/index.ts',
+    output: [{ file: 'types/index.d.ts', format: 'es' }],
+    plugins: [dts()]
   }
 ]
