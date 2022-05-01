@@ -22,7 +22,6 @@
     "release": "bumpp --commit --push --tag && pnpm publish",
     "typecheck": "tsc --noEmit",
     "fix": "eslint --fix --ext .js,.ts src tests scripts",
-    "preinstall": "npx simple-git-hooks",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "prepublishOnly": "nr build"
   },

@@ -12,3 +12,8 @@ English | [中文](./README.CN.md)
 ### rollup.config.js
 
 `change [filename] to your app name what you want to use. e.g window.xxx`
+
+## workspace
+
+- `pnpm run dev--filter pag1`
+- `pnpm run dev--filter pag2`
