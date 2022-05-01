@@ -28,12 +28,16 @@ module.exports = {
       }
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'space-before-function-paren': ['error', {
-      anonymous: 'never',
-      named: 'never',
-      asyncArrow: 'always'
-    }],
-    'arrow-parens': ['error', 'as-needed']
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'never',
+        named: 'never',
+        asyncArrow: 'always'
+      }
+    ],
+    'arrow-parens': ['error', 'as-needed'],
+    'prefer-template': ['off']
   },
   parserOptions: {
     ecmaVersion: 2020

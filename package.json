@@ -1,6 +1,6 @@
 {
   "name": "name",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@6.32.3",
   "description": "ts template",
   "main": "./dist/index.cjs",
@@ -21,7 +21,9 @@
     "coverage": "vitest run --coverage",
     "release": "bumpp --commit --push --tag && pnpm publish",
     "typecheck": "tsc --noEmit",
-    "fix": "eslint --fix --ext .js,.ts src tests",
+    "fix": "eslint --fix --ext .js,.ts src tests scripts",
+    "preinstall": "npx simple-git-hooks",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "prepublishOnly": "nr build"
   },
   "files": [
@@ -45,6 +47,24 @@
       "types": "./types/index.d.ts"
     }
   },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --concurrent false",
+    "commit-msg": "pnpm exec ts-node scripts/verifyCommit.ts $1"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "{src,scripts,types,tests}/**/*.ts": [
+      "eslint --fix --ext .ts"
+    ],
+    "packages/*/{src,types,tests}/**/*.ts": [
+      "eslint --ext .ts"
+    ],
+    "packages/**/*.d.ts": [
+      "eslint --ext .ts"
+    ]
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.20.2",
     "@babel/core": "^7.17.8",
@@ -55,16 +75,21 @@
     "@vitest/ui": "^0.7.4",
     "bumpp": "^7.1.1",
     "c8": "^7.11.0",
+    "conventional-changelog-cli": "^2.2.2",
     "esbuild": "^0.14.27",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "lint-staged": "^12.4.1",
+    "picocolors": "^1.0.0",
     "prettier": "^2.6.2",
     "rollup": "^2.70.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-dts": "^4.2.0",
     "rollup-plugin-esbuild": "^4.8.2",
+    "simple-git-hooks": "^2.7.0",
+    "ts-node": "^10.7.0",
     "typescript": "^4.1",
     "vite": "^2.8.6",
     "vitest": "^0.7.4"
