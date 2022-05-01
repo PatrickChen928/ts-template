@@ -27,7 +27,13 @@ module.exports = {
         ignoreReadBeforeAssign: false
       }
     ],
-    '@typescript-eslint/explicit-module-boundary-types': 'off'
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'space-before-function-paren': ['error', {
+      anonymous: 'never',
+      named: 'never',
+      asyncArrow: 'always'
+    }],
+    'arrow-parens': ['error', 'as-needed']
   },
   parserOptions: {
     ecmaVersion: 2020
