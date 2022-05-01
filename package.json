@@ -1,6 +1,6 @@
 {
   "name": "name",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "packageManager": "pnpm@6.32.3",
   "description": "ts template",
   "main": "./dist/index.cjs",
