@@ -7,13 +7,25 @@ English | [中文](./README.CN.md)
 - `pnpm`
 - `vitest`
 
-## Notice
+## How
+
+`degit https://github.com/ChpShy/ts-template.git project-name`
+
+## ⚠️Notice ⚠️
 
 ### rollup.config.js
 
 `change [filename] to your app name what you want to use. e.g window.xxx`
 
-## workspace
+## run module command
 
-- `pnpm run dev--filter pag1`
-- `pnpm run dev--filter pag2`
+- `pnpm run dev --filter pag1`
+- `pnpm run dev --filter pag2`
+
+## install global dependencies
+
+- `pnpm i -w xxx`
+
+## install module dependencies
+
+- `pnpm i xxx --filter pag1`
