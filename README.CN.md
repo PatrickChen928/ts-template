@@ -31,3 +31,7 @@ ts 开发模版
 ## 安装模块依赖
 
 - `pnpm i xxx --filter pag1`
+
+## 如果 git 钩子未生效
+
+执行 `npx simple-git-hooks`

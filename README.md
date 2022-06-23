@@ -29,3 +29,7 @@ English | [中文](./README.CN.md)
 ## install module dependencies
 
 - `pnpm i xxx --filter pag1`
+
+## if git hooks not effective
+
+run `npx simple-git-hooks`
