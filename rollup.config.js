@@ -4,10 +4,10 @@ import dts from 'rollup-plugin-dts'
 import esbuild from 'rollup-plugin-esbuild'
 
 // TODO: change [filename] to your app name
-const useBabelPlugin = function(options = {}, minified) {
+const useBabelPlugin = function (options = {}, minified) {
   return getBabelOutputPlugin({
     presets: [['@babel/preset-env', options]],
-    filename: 'temp',
+    filename: '[filename]',
     minified
   })
 }
