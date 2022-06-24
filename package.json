@@ -1,7 +1,7 @@
 {
   "name": "name",
   "version": "0.0.0",
-  "packageManager": "pnpm@6.32.3",
+  "packageManager": "pnpm@7.1.7",
   "description": "ts template",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
