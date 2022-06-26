@@ -6,4 +6,3 @@
 dist
 node_modules
 playgrounds/*/pnpm-lock.yaml
-types
