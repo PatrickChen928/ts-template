@@ -4,6 +4,7 @@ importers:
   .:
     specifiers:
       '@antfu/eslint-config': ^0.20.2
+      '@antfu/ni': ^0.16.3
       '@babel/core': ^7.17.8
       '@babel/preset-env': ^7.16.11
       '@rollup/plugin-babel': ^5.3.1
@@ -33,6 +34,7 @@ importers:
       vitest: ^0.7.4
     devDependencies:
       '@antfu/eslint-config': 0.20.2_vuy5uymv5ap7vexonlrz7jyzcq
+      '@antfu/ni': 0.16.3
       '@babel/core': 7.17.8
       '@babel/preset-env': 7.16.11_@babel+core@7.17.8
       '@rollup/plugin-babel': 5.3.1_b3dmjfji46fxi4pypym34a4m6q
@@ -198,6 +200,14 @@ packages:
       - eslint-import-resolver-webpack
       - supports-color
       - typescript
+    dev: true
+
+  /@antfu/ni/0.16.3:
+    resolution:
+      {
+        integrity: sha512-/C1N/hORSJp1qJHr4oRqQzmWPqB6S42T4HV4dWhXOllPJkcqQA/L40U55Oc7Gq4Gm9pLeCNZn7YYU1kUK2Ekpg==
+      }
+    hasBin: true
     dev: true
 
   /@babel/code-frame/7.16.7:
