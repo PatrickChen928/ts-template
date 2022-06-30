@@ -1,5 +1,5 @@
 {
-  "name": "name",
+  "name": "[pkg-name]",
   "version": "0.0.0",
   "packageManager": "pnpm@7.1.7",
   "description": "ts template",
@@ -30,13 +30,13 @@
     "types/"
   ],
   "author": "cyly 786156072@qq.com",
-  "homepage": "https://github.com/ChpShy/[name]#readme",
+  "homepage": "https://github.com/ChpShy/[pkg-name]#readme",
   "bugs": {
-    "url": "https://github.com/ChpShy/[name]/issues"
+    "url": "https://github.com/ChpShy/[pkg-name]/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChpShy/[name].git"
+    "url": "git+https://github.com/ChpShy/[pkg-name].git"
   },
   "license": "MIT",
   "exports": {
