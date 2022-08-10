@@ -56,7 +56,7 @@
     ]
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.20.2",
+    "@antfu/eslint-config": "^0.26.0",
     "@antfu/ni": "^0.16.3",
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
@@ -83,7 +83,7 @@
     "rollup-plugin-esbuild": "^4.8.2",
     "simple-git-hooks": "^2.7.0",
     "typescript": "^4.1",
-    "vite": "^2.8.6",
-    "vitest": "^0.7.4"
+    "vite": "^3.0.0",
+    "vitest": "^0.21.1"
   }
 }
